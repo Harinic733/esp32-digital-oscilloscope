@@ -11,10 +11,6 @@ This project synthesizes multi-mode analog waveforms (Sine, Square, Sawtooth) in
 
 ---
 
-## 🏛️ System Architecture
-+-------------------------------------------------------------------------+ | ESP32 Microcontroller (Dual-Core) | | | | Core 0: TaskSignalSynthesizer Core 1: TaskTelemetryStream | | +--------------------------+ +----------------------------+ | | | - ADC Frequency Reading | | - JSON Serialization | | | | - Sine/Square Math |=======> | - WebSockets Stream | | | | - 50-Sample Buffer Array | Mutex | - Sub-10ms Latency Packet | | | +--------------------------+ +----------------------------+ | +--------------------------------------------------------------|----------+ | WebSockets (JSON Array) | v +----------------------------------+ | Browser Real-Time Canvas UI | | - Phosphor-Green Scope Grid | | - Vpp & Vrms Readout Meters | | - Frequency Spectrum Controls | +----------------------------------+
-
----
 
 ## ✨ Key Technical Features & DSP Concepts
 
